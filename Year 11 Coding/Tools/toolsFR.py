@@ -21,9 +21,25 @@ print(missing_char('metal', 2))
 def base2To10(str):
 	total = 0
 	i = 1
-	while i < len(str) - 1:
+	while i < len(str):
 		total = total + int(str[len(str)-i])*2^(i-1)
 		i = i + 1
+	return total
 
 print(base2To10('101'))
 print(base2To10('111111'))
+
+
+def sumDigits(a):
+	total = 0
+	i = 0
+	a = str(a)
+	while i < len(str(a)):
+		total = total + int(a[i])
+		i = i + 1
+	
+	return total
+
+print(sumDigits(45))
+print(sumDigits(101))
+print(sumDigits(3))
