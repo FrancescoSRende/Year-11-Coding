@@ -85,3 +85,65 @@ print('sumDigitsVersion2')
 print(sumDigitsVersion2(45))
 print(sumDigitsVersion2(101))
 print(sumDigitsVersion2(3))
+
+
+
+print("")
+
+
+
+def scaleElementsA(a,b):
+	i = 0
+	for i in range (0, len(b), 1):
+		b[i] = b[i] * a
+	return b
+
+
+print('scaleElementsA')
+print(scaleElementsA(2, [1,2,3]))
+print(scaleElementsA(3, [4,3]))
+print(scaleElementsA(0, [4,5,6,7]))
+
+
+
+print("")
+
+
+
+def scaleElementsB(a,b):
+	i = 0
+	z = []
+	for i in range (0, len(b), 1):
+		z.append(b[i] * a)
+		z = z
+	return z
+
+
+print('scaleElementsB')
+print(scaleElementsB(2, [1,2,3]))
+print(scaleElementsB(3, [4,3]))
+print(scaleElementsB(0, [4,5,6,7]))
+
+
+
+print("")
+
+
+
+
+
+def addStringsSmallLarge(a,b):
+	if len(a) < len(b):
+		return b + a
+	else:
+		return a + b
+
+
+print('addStringsSmallLarge')
+print(addStringsSmallLarge('aaa', 'bb'))
+print(addStringsSmallLarge('aaa', 'bbbb'))
+print(addStringsSmallLarge('aaa', 'bbb'))
+
+
+
+print("")
