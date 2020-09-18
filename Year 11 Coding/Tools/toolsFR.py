@@ -147,3 +147,53 @@ print(addStringsSmallLarge('aaa', 'bbb'))
 
 
 print("")
+
+
+
+
+
+l = [3,2,1]
+w = l
+z = l.copy() #the .copy() creates a new reference containing a copy of l
+
+
+def findMaxConcern(a):
+	a.sort() #a is now a sorted list, meaning the last element will now be the greatest
+	return a[len(a)-1]
+	#return a[0]   this could return the smallest digit
+	#return a[len(a)-2]   this could return the second-largest digit
+
+
+print('findMaxConcern')
+print(findMaxConcern(l))
+print(findMaxConcern([100,2,3]))
+print(findMaxConcern([37,49,333,-1,8,0]))
+print("W =",w) #the comma automatically turns w into a string
+#w and l have the same reference, therefore changing within the function l also changes w
+print("Z =",z) #because z used the .copy() function, changing l within the function does not affect z
+
+
+
+print("")
+
+
+
+
+
+
+def findMax(a):
+	m = a[0]
+	for i in range(0,len(a),1):
+		m = max(m,a[i]) #max is OVERLOADED method: methods that do the same thing, but are distinguished by
+		#the number of parameters they take. max(m,a[i]) takes 2 values, while max(l) takes however many values
+		#are in the list
+
+
+print('findMax')
+print(findMax([1,2,3]))
+print(findMax([100,2,3]))
+print(findMax([37,49,333,-1,8,0]))
+
+
+
+print("")
