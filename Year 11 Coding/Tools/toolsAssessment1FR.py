@@ -79,19 +79,20 @@ print("")
 def findModSum4(lst):
 
     total = 0
-	for i in range(0,len(lst),1):
-        lst[i] = str(lst[i])
-        lst[i] = lst[i].replace(".", "")
+    for i in range(0,len(lst),1):
+        lst[i] = str(lst[i]).replace(".", "")
         #This collapses the string by removing the dots
-
+        n = 0
         while n < len(lst[i]):
-		    total = total + int(lst[n])
-		    n = n + 1
-            
+            total = total + int(lst[i][n])
+            #lst[i][n] first finds the element of lst at index i then finds the character
+            #at index n
+            n = n + 1
+
     return total
 
 print('findModSum4')
-print(findModSum4([1.2, 2.32, 10.1]))
+print(findModSum4([1.2, 2.32, 10.3]))
 
 
 
@@ -99,15 +100,37 @@ print("")
 
 
 
-def sumDigits(a):
-	total = 0
-	i = 0
-	a = str(a) #casting is the process of changing type
-	#alternatively: for i in range (0, len(a), 1):
-	#count (0, the number we start at), check (len(a), the maximum value, change (1, the value we increment by))
 
-	while i < len(str(a)):
-		total = total + int(a[i])
-		i = i + 1
-	
-	return total
+def reverseWordA(a):
+
+    result = ""
+    for i in range(0,len(a),1):
+        result = result + a[len(a)-1-i]
+
+    return result
+
+print('reverseWordA')
+print(reverseWordA("cat"))
+
+
+
+print("")
+
+
+
+
+def reverseWordB(lst):
+
+    result = ""
+    for i in range(0,len(lst),1):
+        for n in range(0,len(lst[i]),1):
+            result = result + lst[i][len(lst[i])-1-n]
+
+    return result
+
+print('reverseWordB')
+print(reverseWordB(["cat", "dog"]))
+
+
+
+print("")
