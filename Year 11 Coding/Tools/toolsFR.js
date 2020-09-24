@@ -1,3 +1,7 @@
+'remember to use terminology like instance method in the video'
+'ensure you demonstrate your knowledge of the terminology'
+'dont forget pre/post conditions'
+
 function isEven(a) {
 
 	if (a % 2 == 0) {

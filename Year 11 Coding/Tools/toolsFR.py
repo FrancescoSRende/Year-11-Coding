@@ -1,3 +1,7 @@
+#remember to use terminology like instance method in the video
+#ensure you demonstrate your knowledge of the terminology
+#don't forget pre/post conditions
+
 def isEven(a):
 	if a % 2 == 0:
 		return True
@@ -160,8 +164,8 @@ z = l.copy() #the .copy() creates a new reference containing a copy of l
 def findMaxConcern(a):
 	a.sort() #a is now a sorted list, meaning the last element will now be the greatest
 	return a[len(a)-1]
-	#return a[0]   this could return the smallest digit
-	#return a[len(a)-2]   this could return the second-largest digit
+	'''return a[0]   this could return the smallest digit
+	return a[len(a)-2]   this could return the second-largest digit'''
 
 
 print('findMaxConcern')
