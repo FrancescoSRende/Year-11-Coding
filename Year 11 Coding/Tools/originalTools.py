@@ -6,10 +6,10 @@
 #Post-Conditions
 
 
-#this one takes a band name and a genre, then looks at the band's wikipedia page
-#to tell you if the band is that genre
-
-#pre-condition: string inputs, valid band and genre names
+#Description: this function takes an integer and finds and returns its factors
+#Parameters: integer
+#Returns: a list of ints
+#Precondition: number is an int, not a string
 
 def findFactors(a):
     l = []
@@ -32,6 +32,11 @@ print("")
 
 
 
+#Description: this function takes an integer, finds all the numbers beneath it that are
+#divisible by 3 or 5 and returns their sum
+#Parameters: int
+#Returns: int (sum of the numbers divisible by 3 or 5 less)
+#Precondition: a is an int, not a float or string
 
 def projEuler1(a):
     l = []
@@ -53,6 +58,13 @@ print(projEuler1(1000))
 print("")
 
 
+
+
+#Description: this function takes an integer and returns the sum of all even fibonacci numbers
+#less than said integer
+#Parameters: int
+#Returns: int (sum of the even fibonacci numbers less than the int)
+#Precondition: a is an int, not a float or string
 
 def projEuler2(a):
 
@@ -83,6 +95,11 @@ print("")
 
 
 
+#Description: this function takes an integer and returns a list of all fibonacci numbers less than the integer
+#Parameters: integer
+#Returns: a list of integers
+#Precondition: a is an integer
+
 def fibonacciGenerator(a):
 
     fibonacci = [1,2]
@@ -104,6 +121,12 @@ print(fibonacciGenerator(700))
 print("")
 
 
+
+
+#Description: this function takes a number and returns true if it is prime, and false if it is not
+#Parameters: int
+#Returns: boolean
+#Precondition: a is an int
 
 def isPrime(a):
     halfish = round(float(a)/2)
@@ -128,6 +151,10 @@ print("")
 
 
 
+#Description: this function takes a number and returns true if it is semiprime, and false if it is not
+#Parameters: int
+#Returns: boolean
+#Precondition: a is an int
 
 def isSemiPrime(a):
     halfish = round(float(a)/2)
@@ -151,6 +178,12 @@ print("")
 
 
 
+
+
+#Description: this function takes an int and returns its largest factor
+#Parameters: int
+#Returns: int
+#Precondition: a is an integer
 
 def projEuler3(a):
 
@@ -183,6 +216,14 @@ print("")
 
 
 
+
+
+#Description: this function takes two integers and returns an integer which is equal to the larger of the
+#original integers plus the difference between the two integers
+#Parameters: two ints
+#Returns: one int
+#Precondition: a and b are ints
+
 def nextInLine(a,b):
     max = a
     min = b
@@ -202,6 +243,11 @@ print(nextInLine(5,9))
 print("")
 
 
+
+
+#Description: this function takes a string and returns true if it only contains the letters I, O, S, H, Z, X or N, and false otherwise
+#Parameters: a string
+#Returns: a boolean
 
 def rotatingLetters(a):
     check = 0
@@ -224,6 +270,10 @@ print("")
 
 
 
+#Description: this function takes a string and returns true if it has double letters (capitals =/= lowercase)
+#Parameters: a string
+#Returns: a boolean
+
 def hasDoubleLetters(a):
     check = 0
     for i in range(1,len(a),1):
@@ -245,6 +295,12 @@ print("")
 
 
 
+
+#Description: this function takes a text file name and a list and appends every even element
+#to the file then returns a list with each line of the file as an element
+#Parameters: string, list
+#Returns: list with each line of the text file
+#Preconditions: list contains numbers, whether ints or strings
 
 def appendEvenNumbers(name, lst):
 
@@ -279,22 +335,82 @@ print("")
 
 
 
+#Description: this function takes a hexadecimal number and converts it to base 2
+#Parameters: string (hex number)
+#Returns: string (base 2 number)
+#Precondition: only hexadecimal characters are used
+
 def hexToBase2(s):
 
-    hex = ['0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F']
-    bin = ['0000','0001','0010','0011','0100','0101','0110','0111','1000','1001','1010','1011','1100','1101','1110','1111']
+    #parallel lists
+    HEX = ['0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F']
+    BIN = ['0000','0001','0010','0011','0100','0101','0110','0111','1000','1001','1010','1011','1100','1101','1110','1111']
 
     result = ""
+
     
     for n in range(0,len(s),1):
-        for i in range(0,len(hex),1):
-            if hex[i] == s[n]:
-                result = result + bin[i]
+        for i in range(0,len(HEX),1):
+            if HEX[i] == s[n]:
+                result = result + BIN[i] + " "
+                break #this means that once we find one result, we break out of the
+                #most immediate loop structure
 
+
+    '''for n in range(len(s),-1,-1):
+        for i in range(0,len(HEX),1):
+            if HEX[i] == s[n]:
+                result = BIN[i] + result'''
+    #the same loop as above but done in reverse
+
+    '''for i in range(0,len(result),1):
+        if (result == "0"):
+            return result
+        elif (result[i] == "1"):
+            return result[i:]'''
+    #optional code to remove beginning zeros
+    
     return result
 
 print('hexToBase2')
-print(hexToBase2('312'))
+print(hexToBase2('F'))
+
+
+
+print("")
+
+
+
+
+#Description: this function takes a binary number and converts it to hexadecimal
+#Parameters: string (binary number)
+#Returns: string (hexadecimal) number)
+#Precondition: only uses '0' and '1'
+
+def base2ToHex(s):
+
+    HEX = ['0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F']
+    BIN = ['0000','0001','0010','0011','0100','0101','0110','0111','1000','1001','1010','1011','1100','1101','1110','1111']
+
+    result = ""
+
+    extra = len(s) % 4
+
+    for i in range(0,4-extra,1):
+        s = "0" + s
+    
+    for n in range(0,len(s),4):
+        for i in range(0,len(BIN),1):
+            if BIN[i] == s[n:n+4]:
+                result = result + HEX[i]
+
+    if result[0] == "0" and result != "0":
+        result = result[1:]
+    
+    return result
+
+print('base2ToHex')
+print(base2ToHex('1111'))
 
 
 

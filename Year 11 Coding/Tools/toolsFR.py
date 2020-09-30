@@ -2,6 +2,12 @@
 #ensure you demonstrate your knowledge of the terminology
 #don't forget pre/post conditions
 
+
+
+#Description: this function takes a number and returns True if it is even and false otherwise
+#Parameters: string
+#Returns: boolean
+
 def isEven(a):
 	if a % 2 == 0:
 		return True
@@ -21,6 +27,11 @@ print("")
 
 
 
+
+#Description: this function takes a string and an integer n and removes the letter at index n in the string
+#Parameters: string, integer
+#Returns: string (original minus one letter)
+
 def missing_char(str, n):
   return str[0:n] + str[n+1:len(str)]
 
@@ -32,6 +43,12 @@ print(missing_char('metal', 2))
 print("")
 
 
+
+
+#Description: this function takes a number in base 2 string format and returns the corresponding integer in base 10
+#Parameters: string of a number
+#Returns: integer
+#Precondition: string only contains '0's and '1's
 
 def base2To10(str):
 	total = 0
@@ -51,6 +68,10 @@ print("")
 
 
 
+
+#Description: this function takes an integer and returns the sum of all of its digits
+#Parameters: integer
+#Returns: integer (sum of digits)
 
 def sumDigits(a):
 	total = 0
@@ -75,6 +96,11 @@ print("")
 
 
 
+
+#Description: this function takes an integer and returns the sum of all of its digits
+#Parameters: integer
+#Returns: integer (sum of digits)
+
 def sumDigitsVersion2(a):
 	total = 0
 
@@ -96,6 +122,13 @@ print("")
 
 
 
+
+
+
+#Description: this function takes an integer and a list of integers and returns a list of every element in the list multiplied by the integer
+#Parameters: integer, list of integers
+#Returns: list of integers
+
 def scaleElementsA(a,b):
 	i = 0
 	for i in range (0, len(b), 1):
@@ -113,6 +146,11 @@ print(scaleElementsA(0, [4,5,6,7]))
 print("")
 
 
+
+#Description: this function takes an integer and a list of integers and returns a list of every element in the list multiplied by the integer
+#Parameters: integer, list of integers
+#Returns: list of integers
+#Postcondition: original list is not changed
 
 def scaleElementsB(a,b):
 	i = 0
@@ -135,6 +173,10 @@ print("")
 
 
 
+
+#Description: this function takes two strings and adds the smaller one to the larger one
+#Parameters: two strings
+#Returns: string
 
 def addStringsSmallLarge(a,b):
 	if len(a) < len(b):
@@ -161,6 +203,12 @@ w = l
 z = l.copy() #the .copy() creates a new reference containing a copy of l
 
 
+
+
+#Description: this function takes a list and returns the largest value
+#Parameters: list of integers
+#Returns: integer
+
 def findMaxConcern(a):
 	a.sort() #a is now a sorted list, meaning the last element will now be the greatest
 	return a[len(a)-1]
@@ -184,6 +232,10 @@ print("")
 
 
 
+
+#Description: this function takes a list and returns the largest value
+#Parameters: list of integers
+#Returns: integer
 
 def findMax(a):
 	m = a[0]

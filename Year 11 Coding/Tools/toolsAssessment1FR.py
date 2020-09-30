@@ -9,6 +9,13 @@
 #ensure you demonstrate your knowledge of the terminology
 #don't forget pre/post conditions
 
+
+
+
+#Description: this function takes a list of integers and returns the sum of every element that is divisible by 3
+#Parameters: list of integers
+#Returns: integer (sum of elements divisible by 3)
+
 def findModSum1(lst):
 
     l = []
@@ -32,6 +39,9 @@ print("")
 
 
 
+#Description: this function takes a list of integers and two integers and returns the sum of every element between the two integers
+#Parameters: list of integers
+#Returns: integer (sum of elements between a and b)
 
 def findModSum2(lst,a,b):
     max = a
@@ -61,6 +71,11 @@ print("")
 
 
 
+
+#Description: this function takes a list of integers and two integers and returns the sum of every element divisible by both integers
+#Parameters: list of integers
+#Returns: integer (sum of elements divisible by a and b)
+
 def findModSum3(lst,a,b):
     
     l = []
@@ -82,6 +97,13 @@ print(findModSum3([3,4,6,7,12], 1, 3))
 
 print("")
 
+
+
+
+
+#Description: this function takes a list of floats and returns the sum of all the digits of the floats
+#Parameters: list of floats
+#Returns: integer (sum of every digit)
 
 def findModSum4(lst):
 
@@ -108,6 +130,10 @@ print("")
 
 
 
+#Description: this function takes a string and returns it in reverse
+#Parameters: string
+#Returns: string (original string but backwards)
+
 def reverseWordA(a):
 
     result = ""
@@ -125,6 +151,10 @@ print("")
 
 
 
+
+#Description: this function takes a list of strings and returns a string of every word in the list backwards
+#Parameters: list of strings
+#Returns: string (every element, backwards, concatenated)
 
 def reverseWordB(lst):
 

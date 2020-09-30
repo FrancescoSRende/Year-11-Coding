@@ -10,6 +10,18 @@
 #ensure you demonstrate your knowledge of the terminology
 #don't forget pre/post conditions
 
+
+
+
+
+
+#Description: this function takes a string, specifically the name of a text file and
+#returns a list with each line in the function as a separate element of the list
+#Parameters: a string with the name of a text file
+#Returns: a list with with each line in the function as a separate element of the list
+#Precondition: the string is a valid name of a text file
+
+
 def readFileToList(name):
 
 	file = open(name,"r")
@@ -31,6 +43,15 @@ print("")
 
 
 
+
+
+
+
+
+#Description: this function takes a text file name and a list and writes each element of the
+#list to the file on a new line, then returns a list with each line of the file as an element
+#Parameters: string (file name), list
+#Returns: list with each line of the text file
 
 
 def writeListToFile(name, lst):
@@ -61,6 +82,11 @@ print("")
 
 
 
+
+#Description: this function takes a text file name and a list and appends each element of the
+#list to the file on a new line, then returns a list with each line of the file as an element
+#Parameters: string (file name), list
+#Returns: list with each line of the text file
 
 def appendListToFile(name, lst):
 
@@ -94,7 +120,11 @@ print("")
 
 
 
-
+#Description: this function takes a text file name and a list and sorts the list before
+#appending each element of the list to the file on a new line, then returns a list with
+#each line of the file as an element
+#Parameters: string (file name), list
+#Returns: list with each line of the text file
 
 def appendSortedListToFile(name, lst):
 
