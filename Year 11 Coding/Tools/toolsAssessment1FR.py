@@ -1,3 +1,10 @@
+#Description
+#Parameters
+#Return
+
+#Pre-Conditions
+#Post-Conditions
+
 #remember to use terminology like instance method in the video
 #ensure you demonstrate your knowledge of the terminology
 #don't forget pre/post conditions

@@ -1,3 +1,11 @@
+#Description
+#Parameters
+#Return
+
+#Pre-Conditions
+#Post-Conditions
+
+
 #this one takes a band name and a genre, then looks at the band's wikipedia page
 #to tell you if the band is that genre
 
@@ -167,7 +175,7 @@ def projEuler3(a):
     
 
 print('projEuler3')
-print(projEuler3(625))
+print(projEuler3(578))
 
 
 
@@ -262,6 +270,31 @@ def appendEvenNumbers(name, lst):
 
 print('appendEvenNumbers')
 print(appendEvenNumbers("toolsText.txt", ['3', 4, '6', 7]))
+
+
+
+print("")
+
+
+
+
+
+def hexToBase2(s):
+
+    hex = ['0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F']
+    bin = ['0000','0001','0010','0011','0100','0101','0110','0111','1000','1001','1010','1011','1100','1101','1110','1111']
+
+    result = ""
+    
+    for n in range(0,len(s),1):
+        for i in range(0,len(hex),1):
+            if hex[i] == s[n]:
+                result = result + bin[i]
+
+    return result
+
+print('hexToBase2')
+print(hexToBase2('312'))
 
 
 
