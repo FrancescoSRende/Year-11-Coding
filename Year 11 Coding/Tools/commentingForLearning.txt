@@ -1,0 +1,21 @@
+COMMENTING FOR LEARNING:
+------------------------
+
+https://docs.google.com/document/d/1MG4RH5seJo34kiOZ3clfgxrteZMTixPyQKdpvYY8aT4/edit?usp=drive_web&ouid=108023633151242561904
+
+EXPLAIN THE PURPOSE OF EACH LINE
+    'Assignment statement'
+    'Declare' (a variable)
+    'Initialize' (it to some value)'
+    'Counted loop'
+    'Looping through ___, incrementing by ___'
+    'Casting' ("Casting is the process of changing type")
+     ^ Why are we casting?
+    Mention type
+
+Copy the code into another file; one version is just commented for learning while the
+other is commented for understanding. Jump between them in the video
+
+For the simple tool, you could add a trace table into the comments
+If there's a Python function that abstracts the function of the simple tool (eg. a
+base_convert(a,b) function, mention that)

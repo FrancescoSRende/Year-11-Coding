@@ -7,7 +7,7 @@
 
 
 #Description: this function takes an integer and finds and returns its factors
-#Parameters: integer
+#Parameters: integer a
 #Returns: a list of ints
 #Precondition: number is an int, not a string
 
@@ -34,7 +34,7 @@ print("")
 
 #Description: this function takes an integer, finds all the numbers beneath it that are
 #divisible by 3 or 5 and returns their sum
-#Parameters: int
+#Parameters: int a
 #Returns: int (sum of the numbers divisible by 3 or 5 less)
 #Precondition: a is an int, not a float or string
 
@@ -62,7 +62,7 @@ print("")
 
 #Description: this function takes an integer and returns the sum of all even fibonacci numbers
 #less than said integer
-#Parameters: int
+#Parameters: int a
 #Returns: int (sum of the even fibonacci numbers less than the int)
 #Precondition: a is an int, not a float or string
 
@@ -96,7 +96,7 @@ print("")
 
 
 #Description: this function takes an integer and returns a list of all fibonacci numbers less than the integer
-#Parameters: integer
+#Parameters: integer a
 #Returns: a list of integers
 #Precondition: a is an integer
 
@@ -124,7 +124,7 @@ print("")
 
 
 #Description: this function takes a number and returns true if it is prime, and false if it is not
-#Parameters: int
+#Parameters: int a
 #Returns: boolean
 #Precondition: a is an int
 
@@ -152,7 +152,7 @@ print("")
 
 
 #Description: this function takes a number and returns true if it is semiprime, and false if it is not
-#Parameters: int
+#Parameters: int a
 #Returns: boolean
 #Precondition: a is an int
 
@@ -181,7 +181,7 @@ print("")
 
 
 #Description: this function takes an int and returns its largest prime factor
-#Parameters: int
+#Parameters: int a
 #Returns: int
 #Precondition: a is an integer
 
@@ -220,7 +220,7 @@ print("")
 
 #Description: this function takes two integers and returns an integer which is equal to the larger of the
 #original integers plus the difference between the two integers
-#Parameters: two ints
+#Parameters: two ints, a and b
 #Returns: one int
 #Precondition: a and b are ints
 
@@ -246,7 +246,7 @@ print("")
 
 
 #Description: this function takes a string and returns true if it only contains the letters I, O, S, H, Z, X or N, and false otherwise
-#Parameters: a string
+#Parameters: string a
 #Returns: a boolean
 
 def rotatingLetters(a):
@@ -271,7 +271,7 @@ print("")
 
 
 #Description: this function takes a string and returns true if it has double letters (capitals =/= lowercase)
-#Parameters: a string
+#Parameters: string a
 #Returns: a boolean
 
 def hasDoubleLetters(a):
@@ -298,7 +298,7 @@ print("")
 
 #Description: this function takes a text file name and a list and appends every even element
 #to the file then returns a list with each line of the file as an element
-#Parameters: string, list
+#Parameters: string name, list lst
 #Returns: list with each line of the text file
 #Preconditions: list contains numbers, whether ints or strings
 
@@ -336,7 +336,7 @@ print("")
 
 
 #Description: this function takes a hexadecimal number and converts it to base 2
-#Parameters: string (hex number)
+#Parameters: string (hex number) s
 #Returns: string (base 2 number)
 #Precondition: only hexadecimal characters are used
 
@@ -383,7 +383,7 @@ print("")
 
 
 #Description: this function takes a binary number and converts it to hexadecimal
-#Parameters: string (binary number)
+#Parameters: string (binary number) s
 #Returns: string (hexadecimal) number)
 #Precondition: only uses '0' and '1'
 
@@ -421,7 +421,7 @@ print("")
 
 
 #Description: this function takes the three constants of a quadratic equation (a,b,c) and returns the zeroes of said quadratic (unless they are imaginary)
-#Parameters: three ints
+#Parameters: three ints a, b and c
 #Returns: 1 or 2 ints or a string if the zeroes are imaginary
 
 def solveQuadratic(a,b,c):
@@ -466,7 +466,7 @@ print("")
 
 
 #Description: this function takes a number and returns the greatest possible product using a certain number of its digits
-#Parameters: two ints
+#Parameters: two ints num and a
 #Returns: int
 
 def projEuler8ish(num,a):
@@ -531,7 +531,7 @@ print("")
 
 
 #Description: this function takes an int and returns the sum of all primes less than it
-#Parameters: int
+#Parameters: int a
 #Returns: int
 
 
