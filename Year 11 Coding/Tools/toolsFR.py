@@ -89,7 +89,7 @@ def sumDigits(a):
 print('sumDigits')
 print(sumDigits(45))
 print(sumDigits(101))
-print(sumDigits(3))
+print(sumDigits(0))
 
 
 print("")
@@ -243,6 +243,7 @@ def findMax(a):
 		m = max(m,a[i]) #max is OVERLOADED method: methods that do the same thing, but are distinguished by
 		#the number of parameters they take. max(m,a[i]) takes 2 values, while max(l) takes however many values
 		#are in the list
+	return m
 
 
 print('findMax')
@@ -250,6 +251,85 @@ print(findMax([1,2,3]))
 print(findMax([100,2,3]))
 print(findMax([37,49,333,-1,8,0]))
 
+
+
+print("")
+
+
+
+
+
+#Description: this function takes an integer in base 10 and returns a string in base 2
+#Parameters: int a
+#Returns: string
+
+def base10ToBase2(a):
+	
+	result = ""
+
+	while a > 0:
+		result = str(a % 2) + result
+		a = a // 2
+
+	return result
+
+
+print('base10ToBase2')
+print(base10ToBase2(0))
+print(base10ToBase2(3))
+print(base10ToBase2(104))
+
+
+
+print("")
+
+
+
+
+#Description:  This function takes a string, representing a binary value, and if s is invalid the function returns "-1"
+#Parameter: String s
+#Return: String
+
+def base2ToHexDictionary(s):
+
+	result = ""
+
+	DIC = { "0000":"0",
+			"0001":"1",
+			"0010":"2",
+			"0011":"3",
+			"0100":"4",
+			"0101":"5",
+			"0110":"6",
+			"0111":"7",
+			"1000":"8",
+			"1001":"9",
+			"1010":"A",
+			"1011":"B",
+			"1100":"C",
+			"1101":"D",
+			"1110":"E",
+			"1111":"F"}
+
+	while (len(s)%4 != 0):
+		s = "0" + s
+	
+
+
+	for i in range(0, len(s),4):
+		v = s[i: i + 4]
+		result = result + DIC[v]
+#Indexes for dictionaries take an input value, not an index number
+#If DIC was a list, then v would have to be a number
+#But since DIC is a dictionary, v can be a string
+#DIC['0101'] returns the corresponding hex value (on the right) for '0101', which is '5'
+
+	return result
+
+
+print('base2ToHexDictionary')
+print(base2ToHexDictionary("1011110101")) #2 F 5
+print(base2ToHexDictionary("1110111110110")) #1 D F 6
 
 
 print("")

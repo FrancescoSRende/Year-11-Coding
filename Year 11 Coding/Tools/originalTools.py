@@ -13,7 +13,7 @@
 
 def findFactors(a):
     l = []
-    halfish = round(float(a)/2)
+    halfish = int(round(float(a)/2))
     for i in range(1,halfish + 1,1):
         if a % i == 0:
             l.append(i)
@@ -129,7 +129,7 @@ print("")
 #Precondition: a is an int
 
 def isPrime(a):
-    halfish = round(float(a)/2)
+    halfish = int(round(float(a)/2))
     check = 0
     for i in range(2,halfish + 1,1):
         if a % i == 0:
@@ -157,7 +157,7 @@ print("")
 #Precondition: a is an int
 
 def isSemiPrime(a):
-    halfish = round(float(a)/2)
+    halfish = int(round(float(a)/2))
     check = 0
     for i in range(2,halfish + 1,1):
         if a % i == 0:
@@ -180,24 +180,23 @@ print("")
 
 
 
-#Description: this function takes an int and returns its largest prime factor
-#Parameters: int a
+#Description: this function takes an int larger than 1 and returns its largest prime factor
+#Parameters: int a, larger than 1
 #Returns: int
 #Precondition: a is an integer
 
 def projEuler3(a):
 
     factors = []
-    halfish = round(float(a)/2)
-    for i in range(1,halfish + 1,1):
+    for i in range(1,a,1):
         if a % i == 0:
             factors.append(i)
     
     prime_factors = []
     check = 0
     for x in range(0,len(factors),1):
-        half_kinda = round(float(factors[x])/2)
-        for i in range(2,half_kinda + 1,1):
+        half_kinda = int(round(float(factors[x])/2))
+        for i in range(2,half_kinda,1):
             if factors[x] % i == 0:
                 check = check + 1
         
@@ -208,7 +207,7 @@ def projEuler3(a):
     
 
 print('projEuler3')
-print(projEuler3(578))
+print(projEuler3(75))
 
 
 
@@ -542,7 +541,7 @@ def sumPrimes(a):
     check = 0
 
     for x in range(2,a,1):
-        half_kinda = round(float(x)/2) + 1
+        half_kinda = int(round(float(x)/2))
         for i in range(2,half_kinda,1):
             if x % i == 0 and x != i:
                 check = check + 1
